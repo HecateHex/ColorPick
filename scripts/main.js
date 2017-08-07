@@ -20,12 +20,12 @@ var countdownId;
 var blinkId;
 
 function init(){
-    initButtons();
+    initModeButtons();
     initCards();
     reset();
 }
 
-function initButtons(){
+function initModeButtons(){
     for(var i =0;i < modeButtons.length; i++){
         modeButtons[i].addEventListener("click", function(){
             for(var j=0 ; j<modeButtons.length; j++){
@@ -60,7 +60,7 @@ function initCards(){
                 this.style.opacity = 0 ;
                 messageDisplay.textContent = "Try Again" ;
             }
-        })
+        });
     }
 }
 
@@ -114,7 +114,7 @@ function changeColors(color){
 }
 
 function pickColor(){
-    var random = Math.floor(Math.random() *  colors.length);
+    var random = Math.floor(Math.random() * colors.length);
     return colors[random] ;
 }
 
